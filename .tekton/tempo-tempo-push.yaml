@@ -23,13 +23,10 @@ metadata:
   namespace: rhosdt-tenant
 spec:
   taskRunSpecs:
-    - pipelineTaskName: prefetch-dependencies
-      computeResources:
-        requests:
-          cpu: 300m
-          memory: 256Mi
-        limits:
-          memory: 4Gi
+  - pipelineTaskName: prefetch-dependencies
+    computeResources:
+      limits:
+        memory: 4Gi
   params:
   - name: git-url
     value: '{{source_url}}'
